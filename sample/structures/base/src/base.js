@@ -27,6 +27,17 @@ angular.module('adf.structures.base', ['adf'])
   .config(function(dashboardProvider){
 
     dashboardProvider
+    .structure('4-4-4', {
+        rows: [{
+          columns: [{
+            styleClass: 'col-md-4'
+          }, {
+            styleClass: 'col-md-4'
+          }, {
+            styleClass: 'col-md-4'
+          }]
+        }]
+      })
       .structure('6-6', {
         rows: [{
           columns: [{

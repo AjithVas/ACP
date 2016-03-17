@@ -27,19 +27,28 @@ angular.module('sample-01', ['adf', 'LocalStorageModule'])
 .controller('sample01Ctrl', function($scope, localStorageService){
 
   var name = 'sample-01';
-  var model = localStorageService.get(name);
+  var model;// = localStorageService.get(name);
   if (!model) {
     // set default model for demo purposes
     model = {
       title: "Sample 01",
-      structure: "4-8",
+      structure: "4-4-4",
       rows: [{
         columns: [{
           styleClass: "col-md-4",
-          widgets: []
+          widgets: [{
+              type: "Pie"
+            }]
         }, {
-          styleClass: "col-md-8",
-          widgets: []
+          styleClass: "col-md-4",
+          widgets: [{
+              type: "Pie"
+            }]
+        },{
+          styleClass: "col-md-4",
+          widgets: [{
+              type: "Pie"
+            }]
         }]
       }]
     };
